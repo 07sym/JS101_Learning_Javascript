@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BankAccount</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function BankAccount(accountNumber, name, type,balance){
+         this.accountNumber = accountNumber
+         this.name = name
+         this. type  = type
+         this.balance = balance;
+
+         this.deposit=function(amount){
+             
+                this.balance += amount
+            console.log("your updated balance is: " + this.balance)
+             
+         }
+
+         this.withdraw=function(amount){
+            if(this.balance > amount){
+                this.balance -= amount
+            }
+            else{
+            console.log("Insufficient Balance")
+            }
+
+         }
+
+         this.checkBalance = function(){
+            console.log("your balance is: " + this.balance)
+         }
+
+         this.isActive= function(){
+            if(this.balance > 0){
+                console.log("Active")
+            }
+            else{
+                console.log("Inactive")
+            }
+
+         }
+
+    }
+
+    let  account1 = new BankAccount(1290337843, 'Vivek', 'Savings', 90000)
+    account1.deposit(500) 
+    account1.checkBalance()
+    account1.withdraw(10000)
+    account1.checkBalance()
+    account1.isActive()
+</script>
+</html>

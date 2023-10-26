@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookStore</title>
+</head>
+<body>
+    <h1>Welcome To ONline BookStore</h1>
+</body>
+<script>
+     function Book(title, author, genre,  price ){
+        this.title = title
+        this.author = author
+        this.genre = genre
+        this.price = price
+
+        this.getbookInfo = function (){
+            console.log("Title: " + this.title )
+            console.log("Author: " + this.author.name)
+            console.log("Genre: " + this.genre)
+            console.log("Price: " + "Rs."+this.price)
+            console.log('--------------------------');
+        }
+
+     }
+
+     function Author(name, birthYear,nationality){
+        this.name = name
+        this.birthYear = birthYear
+        this.nationality = nationality
+     }
+    //   Author Instance
+     const author1 = new Author("Vishwas Patil", 1959, "Indian");
+     const author2 = new Author("V.V. Shirwadkar", 1912, "Indian");
+     const author3 = new Author("Ranjeet Desai", 1926, "Indian"); 
+     const author4 = new Author("Sane Guruji",1899,"Indian")
+
+    // Book instance
+    const Book1 = new Book("Panipat", author1 , "Fiction" , 480.00)
+    const Book2 = new Book("Natsamrat",author2 , "Drama and literature" , 450.00)
+    const Book3 = new Book("PavanKhind", author3 , "Historical novel" , 170.00)
+    const Book4 = new Book("Shyamchi aai" , author4, " Marathi Fiction" , 135.00)
+
+    const onlineBookStore = [Book1,Book2,Book3,Book4]
+
+    console.log("WELCOME TO ONLINE BOOKSTORE")
+    console.log("-------------------------------------")
+
+    onlineBookStore.forEach(function (book) {
+  book.getbookInfo();
+});
+
+
+
+
+
+
+</script>
+
+</html>

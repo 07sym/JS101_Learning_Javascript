@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vartual Restaturant</title>
+</head>
+<style>
+    #restaurant {
+      text-align: center;
+      padding: 20px;
+    }
+    
+    #food-image {
+      display: none;
+      margin: 20px;
+    }
+  </style>
+<body>
+
+    <div id="restaurant">
+        <h1>Welcome To Our Vertual Restaturant</h1>
+        <button id="order-btn">Order Food</button>
+    </div>
+    <div id="food-selection">
+        <label ><input type="checkbox" value="Burger">Burger</label>
+        <label ><input type="checkbox" value="Pizza">Pizza</label>
+        <label ><input type="checkbox" value="Nuddels">Nuddels</label>
+    </div>
+    <div id="food-image">
+        <img id="food-img" src="" alt="food image">
+        <div id="order-id">Order ID<span id="order-id-number"></span></div>
+    </div>
+    
+</body>
+</html>

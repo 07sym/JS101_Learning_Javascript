@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeaderBoard</title>
+</head>
+<body>
+    <div>
+        <div id="min" style="background-color: red;font-weight: bold; height: 100px; width: 200px;">100</div>
+        <div id="max" style="background-color: green; font-weight: bold; height: 100px; width: 200px;">200</div>
+    </div>
+    
+    <div>
+        <div id="score" style="color: blue;font-size: 20px;">#</div>
+        <div class="keys">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>0</button>
+       </div>
+        
+    </div>
+    <button id="enter">Enter</button>
+    
+</body>
+<script>
+    let min = document.getElementById("min")
+    let max = document.getElementById("max")
+    let score = document.getElementById("score")
+
+    let Keys = document.querySelectorAll(".keys>button")
+    let  enter = document.getElementById("enter")
+
+    for(let i=0;i<keys.length;i++){
+        keys[i].addEventListener("click",function(){
+            score.innerText += keys[i].innerText
+
+        })
+    }
+
+</script>
+</html>
